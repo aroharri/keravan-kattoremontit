@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Keravan Kattoremontit Oy – Tervetuloa kotisivuillemme! (demo)</title>
+<meta name="description" content="Keravan Kattoremontit Oy on keksitty demoyritys, jonka sähköpostiin vastaa Pikavastaus-botti minuuteissa vuorokauden ympäri.">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"Comic Neue","Comic Sans MS","Chalkboard SE",cursive,sans-serif;
+    font-size:18px;line-height:1.5;color:#111;
+    background-color:#1b3f8f;
+    background-image:
+      linear-gradient(45deg,rgba(255,255,255,.07) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.07) 75%),
+      linear-gradient(45deg,rgba(255,255,255,.07) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.07) 75%),
+      linear-gradient(180deg,#0a2a6b 0%,#2f6fd6 45%,#7fc3ff 100%);
+    background-size:40px 40px,40px 40px,100% 100%;
+    background-position:0 0,20px 20px,0 0;
+    background-attachment:scroll,scroll,fixed;
+    padding-bottom:70px;
+  }
+  a{color:#0000ee}
+  a:visited{color:#551a8b}
+  .wrap{max-width:900px;margin:0 auto;background:#fffbe6;border:6px ridge #c0c0c0;box-shadow:0 0 0 3px #000,8px 8px 0 6px rgba(0,0,0,.35)}
+  .psst{
+    max-width:900px;margin:8px auto 6px;padding:5px 12px;
+    background:rgba(250,246,225,.92);color:#4a4a4a;border:1px solid #cfc6a0;border-radius:3px;
+    font-family:"Liberation Sans",Arial,Helvetica,sans-serif;font-size:13px;line-height:1.4;text-align:center;
+    box-shadow:0 1px 3px rgba(0,0,0,.2)
+  }
+  .psst a{color:#4a4a4a !important;font-weight:700}
+  .psst .psst-tag{display:inline-block;background:#e6dcae;color:#5a5234;border-radius:2px;padding:0 5px;margin-right:4px;font-weight:700;font-size:12px}
+  @media (max-width:700px){.psst{margin:6px 6px 5px;font-size:12.5px;padding:5px 9px}}
+  /* Headline WordArt */
+  header{background:linear-gradient(180deg,#ffef7a,#ffb300 60%,#ff7b00);border-bottom:6px ridge #c0c0c0;text-align:center;padding:18px 10px 8px}
+  .wordart{
+    font-family:Impact,"Arial Black","Liberation Sans",sans-serif;font-weight:900;
+    font-size:clamp(30px,7vw,64px);line-height:1.05;margin:0;letter-spacing:1px;
+    color:#e10600;
+    background:linear-gradient(180deg,#ff4d4d 0%,#c40000 50%,#7a0000 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    -webkit-text-stroke:2px #000;
+    filter:drop-shadow(3px 3px 0 #fff) drop-shadow(5px 5px 0 #1b3f8f);
+    transform:perspective(400px) rotateX(12deg);
+  }
+  .oy{display:inline-block;font-size:.6em;vertical-align:middle}
+  .subtitle{font-weight:700;font-style:italic;color:#1b3f8f;margin:6px 0 4px;font-size:clamp(15px,2.6vw,20px)}
+  /* Nav */
+  nav{background:#000080;border-bottom:4px ridge #c0c0c0;display:flex;flex-wrap:wrap;justify-content:center}
+  nav a{color:#ffff00 !important;font-weight:700;text-decoration:none;padding:8px 14px;border-right:2px solid #4040c0}
+  nav a:hover{background:#ff00ff;color:#fff !important;text-decoration:underline}
+  /* Marquee */
+  .ticker{background:#000;color:#00ff00;font-family:"Courier New","Liberation Mono",monospace;font-weight:700;overflow:hidden;white-space:nowrap;border-bottom:4px ridge #c0c0c0}
+  .ticker span{display:inline-block;padding:6px 0 6px 100%;animation:vieritys 38s linear infinite;animation-delay:-9s}
+  @keyframes vieritys{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+  @media (prefers-reduced-motion:reduce){.ticker span{animation:none;padding-left:10px;white-space:normal}}
+  main{padding:18px 22px}
+  section{margin:0 0 26px}
+  h2{
+    font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;
+    color:#fff;background:linear-gradient(90deg,#c40000,#ff7b00);
+    padding:6px 12px;margin:0 0 12px;border:3px outset #ffb3b3;text-shadow:2px 2px 0 #000;font-size:clamp(20px,3.5vw,28px)
+  }
+  .hero{display:grid;grid-template-columns:1fr 280px;gap:18px;align-items:center}
+  .tervetuloa{font-size:clamp(26px,5vw,40px);font-weight:700;color:#c40000;text-shadow:2px 2px 0 #ffd84d;margin:0 0 8px}
+  .rakenteilla{display:inline-block;margin-top:10px;padding:6px 12px;font-weight:700;background:repeating-linear-gradient(45deg,#ffd000 0 14px,#000 14px 28px);border:2px solid #000}
+  .rakenteilla b{background:#ffd000;padding:2px 8px}
+  .roof svg{width:100%;height:auto;display:block;border:4px ridge #c0c0c0;background:#aee4ff}
+  .blink{animation:vilkku 1.1s steps(1) infinite;color:#ff00ff;font-weight:700}
+  @keyframes vilkku{50%{visibility:hidden}}
+  @media (prefers-reduced-motion:reduce){.blink{animation:none}}
+  /* CTA */
+  .cta{position:relative;margin:14px 0 10px;padding:14px 12px 10px 12px;background:#fff;border:3px dashed #c40000;text-align:center}
+  .cta-klikkaa{font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;color:#c40000;font-size:17px;letter-spacing:1px;margin:0 0 6px}
+  .cta-klikkaa .nuoli{display:inline-block;animation:tonkkaa .8s ease-in-out infinite alternate}
+  @keyframes tonkkaa{from{transform:translateY(-3px)}to{transform:translateY(4px)}}
+  .cta-nappi{
+    display:inline-block;padding:12px 22px 11px;text-decoration:none;color:#fff !important;text-align:center;line-height:1.15;
+    font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;font-size:clamp(19px,2.6vw,25px);
+    text-shadow:2px 2px 0 #000;
+    background:linear-gradient(180deg,#ff8a8a 0%,#e10600 48%,#a80000 52%,#d40000 100%);
+    border:5px outset #ff9d9d;border-radius:16px;
+    box-shadow:inset 0 2px 0 rgba(255,255,255,.6),0 6px 0 #5a0000,0 10px 18px rgba(0,0,0,.35)
+  }
+  .cta-nappi small{display:block;font-family:"Comic Neue","Comic Sans MS","Chalkboard SE",cursive,sans-serif;font-weight:700;font-size:.72em;color:#fff59d;text-shadow:1px 1px 0 #000;margin-top:3px}
+  .cta-nappi:hover{filter:brightness(1.1)}
+  .cta-nappi:active{border-style:inset;transform:translateY(4px);box-shadow:0 2px 0 #5a0000}
+  .cta-aika{margin:12px 0 0;font-size:15px;color:#333;font-style:italic}
+  .tahti{
+    position:absolute;top:-34px;right:-26px;width:104px;height:104px;z-index:2;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    background:#ffe600;color:#c40000;clip-path:polygon(100.0% 50.0%,87.0% 58.5%,95.0% 71.7%,79.7% 73.7%,81.2% 89.1%,66.5% 84.2%,61.1% 98.7%,50.0% 88.0%,38.9% 98.7%,33.5% 84.2%,18.8% 89.1%,20.3% 73.7%,5.0% 71.7%,13.0% 58.5%,0.0% 50.0%,13.0% 41.5%,5.0% 28.3%,20.3% 26.3%,18.8% 10.9%,33.5% 15.8%,38.9% 1.3%,50.0% 12.0%,61.1% 1.3%,66.5% 15.8%,81.2% 10.9%,79.7% 26.3%,95.0% 28.3%,87.0% 41.5%);
+    font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;font-size:15px;line-height:1.05;
+    transform:rotate(14deg);filter:drop-shadow(2px 2px 0 #c40000);
+    animation:syke 1.6s ease-in-out infinite
+  }
+  .tahti span{display:block;font-size:22px}
+  @keyframes syke{50%{transform:rotate(14deg) scale(1.08)}}
+  .hero-oikea .rakenteilla{display:block;text-align:center;margin-top:12px}
+  @media (prefers-reduced-motion:reduce){.cta-klikkaa .nuoli,.tahti{animation:none}}
+  /* Palvelut */
+  .palvelut{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+  .palvelut li{background:#fff;border:3px outset #d9d9d9;padding:12px}
+  .palvelut h3{margin:0 0 4px;color:#000080;font-size:20px}
+  .palvelut .ikoni{font-size:26px;vertical-align:-3px}
+  .palvelut .hinta{display:block;margin-top:6px;font-size:15px;color:#555;font-style:italic}
+  .erikois{grid-column:1/-1;background:#fff0f5 !important;border-color:#ff69b4 !important}
+  .uusi{display:inline-block;background:#ff0000;color:#fff;font-size:13px;font-weight:700;padding:1px 6px;transform:rotate(-8deg);margin-left:6px;border:2px solid #ffff00}
+  /* Miksi me */
+  .miksi{background:#fff;border:3px dashed #000080;padding:10px 16px 10px 44px;margin:0}
+  .miksi li{margin:8px 0}
+  .miksi li::marker{content:"✔ ";color:#008000;font-weight:700}
+  /* Palaute */
+  .palaute{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+  blockquote{margin:0;background:#ffffcc;border:2px solid #c9b200;padding:12px;box-shadow:4px 4px 0 #c9b200}
+  blockquote p{margin:0 0 6px}
+  .tahdet{color:#ff9900;letter-spacing:2px}
+  cite{font-weight:700;font-style:normal;color:#000080}
+  /* Yhteys */
+  .yhteys{text-align:center;background:#e6f7ff;border:4px ridge #c0c0c0;padding:18px 12px}
+  .nappi{
+    display:inline-block;margin:12px 0;padding:18px 28px;font-size:clamp(20px,4vw,30px);font-weight:900;
+    font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;
+    color:#fff !important;text-decoration:none;text-shadow:2px 2px 0 #000;
+    background:linear-gradient(180deg,#5aff5a,#00a800 55%,#006400);border:5px outset #7dff7d;border-radius:14px;
+    box-shadow:0 6px 0 #003300,0 10px 18px rgba(0,0,0,.35)
+  }
+  .nappi:hover{filter:brightness(1.1)}
+  .nappi:active{border-style:inset;transform:translateY(4px);box-shadow:0 2px 0 #003300}
+  .tiedot{display:inline-block;text-align:left;margin:10px auto 0;font-size:16px;background:#fff;border:2px solid #999;padding:8px 14px}
+  .tiedot dt{float:left;clear:left;font-weight:700;width:110px}
+  .tiedot dd{margin:0 0 2px 110px}
+  /* Demo-ilmoitus */
+  .demo{background:#fff;border:5px double #c40000;padding:14px 18px;font-family:"Liberation Sans",Arial,sans-serif;font-size:17px}
+  .demo h2{background:#c40000}
+  .demo p{margin:0 0 8px}
+  .demo a{font-weight:700}
+  /* Alapalkki */
+  .laskuri{text-align:center;padding:12px;background:#000;color:#ccc;font-size:15px;border-top:6px ridge #c0c0c0}
+  .numerot{display:inline-block;font-family:"Courier New","Liberation Mono",monospace;font-weight:700;background:#111;color:#ff3030;border:2px inset #666;padding:2px 6px;letter-spacing:4px;font-size:20px}
+  .laskuri small{display:block;margin-top:6px;color:#999}
+  .webring{margin-top:6px;color:#ffff66}
+  footer{text-align:center;padding:10px;font-size:15px;background:#c0c0c0;border-top:3px outset #fff}
+  .sticky{
+    position:fixed;left:0;right:0;bottom:0;z-index:10;
+    background:#ffff00;color:#000;border-top:3px solid #000;
+    font-family:"Liberation Sans",Arial,sans-serif;font-size:15px;text-align:center;padding:8px 10px;line-height:1.35
+  }
+  .sticky a{color:#000 !important;font-weight:700}
+  @media (max-width:700px){
+    body{font-size:17px}
+    .wrap{border-width:3px;box-shadow:none}
+    .hero{grid-template-columns:1fr}
+    .hero-vasen{display:flex;flex-direction:column}
+    .hero-vasen > *{order:2}
+    .hero-vasen .tervetuloa{order:0}
+    .hero-vasen .cta{order:1;margin:18px 0 18px}
+    .tahti{width:86px;height:86px;font-size:13px;top:-40px;right:-6px}
+    .tahti span{font-size:18px}
+    .cta-nappi{padding:11px 14px 10px}
+    .roof{max-width:320px;margin:0 auto}
+    main{padding:14px}
+    nav a{padding:6px 9px;font-size:15px}
+    .wordart{-webkit-text-stroke:1.2px #000}
+    .tiedot dt{float:none;width:auto}
+    .tiedot dd{margin:0 0 6px}
+    .sticky{font-size:13.5px}
+    body{padding-bottom:90px}
+  }
+</style>
+</head>
+<body>
+<p class="psst" role="note"><span class="psst-tag">Psst</span>Keravan Kattoremontit Oy on keksitty yritys. Sen tehtävä on esitellä sähköpostiin vastaavaa Pikavastaus-bottia – kokeile: <a href="mailto:pikavastaus@gmail.com?subject=Kattoremontti">pikavastaus@gmail.com</a></p>
+<div class="wrap">
+  <header id="etusivu">
+    <h1 class="wordart">KERAVAN KATTOREMONTIT <span class="oy">OY</span></h1>
+    <p class="subtitle">Kattoalan osaamista Keravalta vuodesta ”jo pitkään”</p>
+  </header>
+
+  <nav aria-label="Päävalikko">
+    <a href="#etusivu">Etusivu</a>
+    <a href="#palvelut">Palvelut</a>
+    <a href="#miksi">Miksi me</a>
+    <a href="#palaute">Asiakaspalaute</a>
+    <a href="#yhteys">Ota yhteyttä</a>
+  </nav>
+
+  <div class="ticker" aria-label="Tiedotteet">
+    <span>★ Tervetuloa kotisivuillemme! ★ Sähköpostiin vastataan minuuteissa, myös yöllä ★ Katto pitää, kun katto pitää ★ UUTTA: nyt myös internetissä ★ Käynti ensin, hinta sitten ★ Emme lupaa samana päivänä mitään ★ Muistathan katsoa välillä ylöspäin ★</span>
+  </div>
+
+  <main>
+    <section class="hero" aria-labelledby="tervetuloa">
+      <div class="hero-vasen">
+        <p class="tervetuloa" id="tervetuloa">Tervetuloa kotisivuillemme!</p>
+        <p>Olemme keravalainen kattoalan yritys. Teemme kattoja, korjaamme kattoja ja tarvittaessa katsomme kattoja. Olemme tehneet tätä niin kauan, että emme enää muista, mitä teimme ennen.</p>
+        <div class="cta">
+          <div class="tahti" aria-hidden="true"><div><span>NYT!</span>Myös<br>yöllä!</div></div>
+          <p class="cta-klikkaa"><span class="nuoli" aria-hidden="true">👇</span> KLIKKAA TÄSTÄ <span class="nuoli" aria-hidden="true">👇</span></p>
+          <a class="cta-nappi" href="mailto:pikavastaus@gmail.com?subject=Kattoremontti">✉ LÄHETÄ SÄHKÖPOSTIA<small>Kalle vastaa melkein heti!</small></a>
+          <p class="cta-aika">Keskimääräinen vastausaika: muutama minuutti. Myös yöllä. Myös juhannuksena.</p>
+        </div>
+        <p>Sivuiltamme löydät tietoa palveluistamme, asiakkaidemme palautetta sekä yhteystiedot. Kiitos käynnistä, ja muistathan pyyhkiä jalat.</p>
+      </div>
+      <div class="hero-oikea">
+      <div class="roof" aria-hidden="true">
+        <svg viewBox="0 0 280 230" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="235" cy="40" r="22" fill="#ffe600" stroke="#ff9900" stroke-width="4"/>
+          <g stroke="#ff9900" stroke-width="3">
+            <line x1="235" y1="6" x2="235" y2="12"/><line x1="201" y1="40" x2="207" y2="40"/>
+            <line x1="211" y1="16" x2="215" y2="20"/><line x1="259" y1="16" x2="255" y2="20"/>
+          </g>
+          <ellipse cx="60" cy="40" rx="34" ry="13" fill="#fff"/><ellipse cx="85" cy="33" rx="24" ry="12" fill="#fff"/>
+          <rect x="0" y="195" width="280" height="35" fill="#4caf50"/>
+          <rect x="60" y="120" width="160" height="80" fill="#ffe4b5" stroke="#000" stroke-width="3"/>
+          <polygon points="40,125 140,55 240,125" fill="#c62828" stroke="#000" stroke-width="3"/>
+          <g stroke="#7f0000" stroke-width="2">
+            <line x1="70" y1="104" x2="210" y2="104"/><line x1="98" y1="84" x2="182" y2="84"/><line x1="124" y1="66" x2="156" y2="66"/>
+          </g>
+          <rect x="175" y="62" width="18" height="34" fill="#8d6e63" stroke="#000" stroke-width="3"/>
+          <rect x="125" y="150" width="30" height="50" fill="#795548" stroke="#000" stroke-width="3"/>
+          <circle cx="149" cy="176" r="3" fill="#ffd700"/>
+          <rect x="78" y="140" width="32" height="28" fill="#bbdefb" stroke="#000" stroke-width="3"/>
+          <line x1="94" y1="140" x2="94" y2="168" stroke="#000" stroke-width="2"/>
+          <rect x="170" y="140" width="32" height="28" fill="#bbdefb" stroke="#000" stroke-width="3"/>
+          <line x1="186" y1="140" x2="186" y2="168" stroke="#000" stroke-width="2"/>
+          <line x1="40" y1="125" x2="30" y2="200" stroke="#6d4c41" stroke-width="4"/>
+          <line x1="70" y1="125" x2="30" y2="200" stroke="#6d4c41" stroke-width="4"/>
+          <line x1="36" y1="175" x2="62" y2="175" stroke="#6d4c41" stroke-width="3"/>
+          <line x1="39" y1="150" x2="66" y2="150" stroke="#6d4c41" stroke-width="3"/>
+          <text x="140" y="222" font-family="Comic Neue, Comic Sans MS, Chalkboard SE, cursive, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">Katto (kuvituskuva)</text>
+        </svg>
+      </div>
+      <div class="rakenteilla"><b>🚧 Sivu on osittain rakenteilla 🚧</b></div>
+      </div>
+    </section>
+
+    <section id="palvelut" aria-labelledby="h-palvelut">
+      <h2 id="h-palvelut">🔨 Palvelut</h2>
+      <ul class="palvelut">
+        <li><h3><span class="ikoni" aria-hidden="true">💧</span> Kattovuodot</h3>
+          Jos sisällä sataa, se ei ole normaalia. Etsimme vuodon, kerromme, mistä se johtuu ja korjaamme sen. Sadetta emme syytä.
+          <span class="hinta">Hinta: selviää käynnillä.</span></li>
+        <li><h3><span class="ikoni" aria-hidden="true">🪜</span> Räystäät</h3>
+          Räystäs on katon tärkein reuna. Puhdistamme, korjaamme ja uusimme. Linnunpesät siirretään kunnioittavasti.
+          <span class="hinta">Hinta: selviää käynnillä.</span></li>
+        <li><h3><span class="ikoni" aria-hidden="true">🧱</span> Tiilikatot</h3>
+          Tiili on perinteinen ja painava materiaali. Kunnioitamme molempia ominaisuuksia.
+          <span class="hinta">Hinta: selviää käynnillä.</span></li>
+        <li><h3><span class="ikoni" aria-hidden="true">🥫</span> Peltikatot</h3>
+          Pelti kestää ja kolisee. Asennamme sen niin, että se kestää enemmän kuin kolisee.
+          <span class="hinta">Hinta: selviää käynnillä.</span></li>
+        <li class="erikois"><h3><span class="ikoni" aria-hidden="true">🧐</span> Katon katsominen vakavalla ilmeellä <span class="uusi">ERIKOIS&shy;OSAAMISTA</span></h3>
+          Kattomestarimme seisoo pihalla, katsoo kattoa pitkään, nyökkää hitaasti ja sanoo: ”Joo.” Tämän jälkeen tiedämme, mitä tehdään. Palvelu sisältyy jokaiseen tarkastuskäyntiin, eikä sitä voi tilata erikseen, vaikka moni on kysynyt.
+          <span class="hinta">Hinta: ilme ei maksa mitään. Katto maksaa.</span></li>
+      </ul>
+    </section>
+
+    <section id="miksi" aria-labelledby="h-miksi">
+      <h2 id="h-miksi">⭐ Miksi me?</h2>
+      <ul class="miksi">
+        <li><b>Vastaamme sähköpostiin minuuteissa. Myös kello kolme yöllä.</b> Asiakaspalvelustamme vastaa Kalle, joka ei nuku. Emme ole kysyneet syytä, koska se tuntui epäkohteliaalta.</li>
+        <li><b>Käynti aina ennen tarjousta.</b> Kattoa ei arvioida puhelimessa eikä kuvailun perusteella. Tulemme paikalle ja katsomme (ks. vakava ilme).</li>
+        <li><b>Emme lupaa samana päivänä mitään.</b> Emme myöskään lupaa mitään seuraavana päivänä. Lupaamme vain vastata viestiisi nopeasti ja sopia kanssasi käynnin.</li>
+        <li><b>Kysymme vain sen, mitä tarvitaan.</b> Osoite, rakennustyyppi, mikä vaivaa, milloin sopii käydä ja puhelinnumero. Kalle ei kysy lempiväriäsi.</li>
+        <li><b>Paikallista osaamista.</b> Olemme nähneet Keravan katot ylhäältä käsin. Osa niistä on nähnyt meidät alhaalta.</li>
+      </ul>
+    </section>
+
+    <section id="palaute" aria-labelledby="h-palaute">
+      <h2 id="h-palaute">💬 Asiakaspalaute</h2>
+      <div class="palaute">
+        <blockquote><p class="tahdet" aria-label="viisi tähteä">★★★★★</p>
+          <p>Lähetin sähköpostia yhdeltä yöllä, koska en saanut vuodolta unta. Kalle vastasi neljässä minuutissa. Sitten en saanut unta siitä.</p>
+          <cite>– Raimo, Kerava</cite></blockquote>
+        <blockquote><p class="tahdet" aria-label="viisi tähteä">★★★★★</p>
+          <p>Kattomestari katsoi kattoamme vakavalla ilmeellä vartin ajan. En ole koskaan tuntenut oloani yhtä turvalliseksi.</p>
+          <cite>– Pirjo, Räystäsmäki</cite></blockquote>
+        <blockquote><p class="tahdet" aria-label="viisi tähteä">★★★★★</p>
+          <p>Pyysin hintaa heti. Minulle kerrottiin, että hinta selviää käynnillä. Hinta selvisi käynnillä.</p>
+          <cite>– Seppo, Tiilikylä</cite></blockquote>
+        <blockquote><p class="tahdet" aria-label="viisi tähteä">★★★★★</p>
+          <p>Räystäästä löytyi tennispallo, jonka hukkasin vuonna 1987. Kiitos.</p>
+          <cite>– Kalevi, Peltola</cite></blockquote>
+        <blockquote><p class="tahdet" aria-label="neljä tähteä">★★★★☆</p>
+          <p>Kysyin, tuleeko Kalle kahville. Kalle vastasi heti, mutta ei tullut. Yksi tähti pois.</p>
+          <cite>– Anneli, Kerava</cite></blockquote>
+        <blockquote><p class="tahdet" aria-label="viisi tähteä">★★★★★</p>
+          <p>Hyvä katto. Pitää.</p>
+          <cite>– Tapio, Kattila</cite></blockquote>
+      </div>
+    </section>
+
+    <section id="yhteys" class="yhteys" aria-labelledby="h-yhteys">
+      <h2 id="h-yhteys">📧 Ota yhteyttä</h2>
+      <p>Kerro sähköpostilla, mikä katossasi vaivaa. Kalle vastaa yleensä muutamassa minuutissa ja kysyy vain sen, mitä vielä puuttuu, jotta voimme sopia tarkastuskäynnin.</p>
+      <a class="nappi" href="mailto:pikavastaus@gmail.com?subject=Kattoremontti">✉ LÄHETÄ VIESTI KALLELLE</a>
+      <p><b>pikavastaus@gmail.com</b><br>Kokeile vaikka heti. Tai kello kolme yöllä ja katso, kauanko vastauksessa kestää.</p>
+      <dl class="tiedot">
+        <dt>Puhelin:</dt><dd>ei ole (Kalle hoitaa)</dd>
+        <dt>Osoite:</dt><dd>Kerava, tarkempi sijainti vaihtelee työmaan mukaan</dd>
+        <dt>Y-tunnus:</dt><dd>haetaan</dd>
+        <dt>Aukioloajat:</dt><dd>Sähköposti aina auki. Tikkaat arkisin.</dd>
+      </dl>
+    </section>
+
+    <section id="demo" class="demo" aria-labelledby="h-demo">
+      <h2 id="h-demo">ℹ️ Huom: tämä on demo</h2>
+      <p><b>Keravan Kattoremontit Oy on keksitty demoyritys.</b> Sivun takana on Pikavastaus-botti, joka vastaa sähköpostiin minuuteissa vuorokauden ympäri.</p>
+      <p>Kokeile: lähetä viesti osoitteeseen <a href="mailto:pikavastaus@gmail.com?subject=Kattoremontti">pikavastaus@gmail.com</a> ja kuvaile kattosi murheet. Kalle vastaa ja kysyy puuttuvat tiedot samaan tapaan kuin oikean yrityksen asiakaspalvelu.</p>
+      <p>Haluatko saman omaan yritykseesi? Kysy samasta osoitteesta.</p>
+      <p style="font-size:14px;color:#555;margin:0">Sivun henkilöt, paikat ja asiakaspalautteet ovat keksittyjä. Mahdolliset yhtäläisyydet oikeisiin yrityksiin tai henkilöihin ovat sattumaa. Oikeita kattotöitä ei tämän sivun kautta tilata.</p>
+    </section>
+  </main>
+
+  <div class="laskuri">
+    Olet kävijä numero <span class="numerot">000347</span>
+    <small>Päivitetty viimeksi 14.3.2004 · Sivu näkyy parhaiten Internet Explorer 6:lla ja 800 × 600 -resoluutiolla</small>
+    <div class="webring">« Edellinen | Keravan kattoalan verkkorengas | Seuraava »</div>
+  </div>
+  <footer>© Keravan Kattoremontit Oy (demo) – toteutus Harriaro</footer>
+</div>
+
+<div class="sticky" role="note">
+  <b>DEMO:</b> Keravan Kattoremontit Oy on keksitty yritys. Kokeile Pikavastaus-bottia: <a href="mailto:pikavastaus@gmail.com?subject=Kattoremontti">pikavastaus@gmail.com</a> · <a href="#demo">Lue lisää</a>
+</div>
+</body>
+</html>
