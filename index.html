@@ -170,6 +170,42 @@
     .cv-paperi dl{grid-template-columns:1fr;gap:0}
     .cv-paperi dt{margin-top:6px}
   }
+  /* Miksi nopeus ratkaisee */
+  .nopeus{position:relative;margin:4px 0 30px;padding:18px 26px 22px;text-align:center;
+    background:#ffe600;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.35) 0 18px,transparent 18px 36px);
+    border:8px solid #c40000;outline:4px solid #000;outline-offset:0;box-shadow:10px 10px 0 #000080}
+  .nopeus-otsikko{
+    font-family:Impact,"Arial Black","Liberation Sans",sans-serif;font-weight:900;
+    font-size:clamp(34px,7.4vw,68px);line-height:1.02;margin:6px 0 16px;letter-spacing:1px;padding:0;border:0;text-shadow:none;
+    color:#e10600;
+    background:linear-gradient(180deg,#ff4d4d 0%,#c40000 50%,#7a0000 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    -webkit-text-stroke:2px #000;
+    filter:drop-shadow(3px 3px 0 #fff) drop-shadow(5px 5px 0 #000080);
+    overflow-wrap:break-word
+  }
+  .nopeus ol{list-style:none;counter-reset:nop;margin:0 auto;padding:0;max-width:780px;text-align:left}
+  .nopeus ol li{counter-increment:nop;position:relative;margin:0 0 14px;padding:10px 14px 10px 78px;min-height:74px;
+    background:#fff;border:4px outset #ffb3b3;box-shadow:4px 4px 0 #000;
+    font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;font-size:clamp(21px,3.6vw,34px);line-height:1.18;color:#000080}
+  .nopeus ol li::before{content:counter(nop);position:absolute;left:10px;top:50%;margin-top:-28px;width:56px;height:56px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#ff8a8a,#e10600 55%,#7a0000);border:3px outset #ff9d9d;color:#fff;
+    font-size:30px;line-height:50px;text-align:center;text-shadow:2px 2px 0 #000}
+  .nopeus-loppu{margin:16px 0 0;font-weight:700;font-style:italic;font-size:clamp(20px,3vw,28px);color:#7a0000}
+  .nopeus-tahti{
+    position:absolute;top:-30px;left:-24px;width:96px;height:96px;z-index:2;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    background:#fff;color:#c40000;clip-path:polygon(100.0% 50.0%,87.0% 58.5%,95.0% 71.7%,79.7% 73.7%,81.2% 89.1%,66.5% 84.2%,61.1% 98.7%,50.0% 88.0%,38.9% 98.7%,33.5% 84.2%,18.8% 89.1%,20.3% 73.7%,5.0% 71.7%,13.0% 58.5%,0.0% 50.0%,13.0% 41.5%,5.0% 28.3%,20.3% 26.3%,18.8% 10.9%,33.5% 15.8%,38.9% 1.3%,50.0% 12.0%,61.1% 1.3%,66.5% 15.8%,81.2% 10.9%,79.7% 26.3%,95.0% 28.3%,87.0% 41.5%);
+    font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;font-size:19px;line-height:1;
+    transform:rotate(-14deg)
+  }
+  @media (max-width:700px){
+    .nopeus{padding:26px 12px 16px;border-width:6px;outline-width:3px;box-shadow:6px 6px 0 #000080}
+    .nopeus-otsikko{-webkit-text-stroke:1.2px #000;margin:4px 0 12px}
+    .nopeus ol li{padding:8px 10px 8px 56px;min-height:0;font-size:clamp(20px,5.6vw,26px)}
+    .nopeus ol li::before{left:6px;width:40px;height:40px;margin-top:-20px;font-size:22px;line-height:34px}
+    .nopeus-tahti{width:72px;height:72px;font-size:14px;top:-26px;left:-12px}
+  }
   /* Palvelut */
   .palvelut{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
   .palvelut li{background:#fff;border:3px outset #d9d9d9;padding:12px}
@@ -251,6 +287,7 @@
 
   <nav aria-label="Päävalikko">
     <a href="#etusivu">Etusivu</a>
+    <a href="#nopeus">Miksi nopeus?</a>
     <a href="#palvelut">Palvelut</a>
     <a href="#miksi">Miksi me</a>
     <a href="#toimii">Näin se toimii</a>
@@ -306,6 +343,17 @@
       </div>
       <div class="rakenteilla"><b>🚧 Sivu on osittain rakenteilla 🚧</b></div>
       </div>
+    </section>
+
+    <section id="nopeus" class="nopeus" aria-labelledby="h-nopeus">
+      <div class="nopeus-tahti" aria-hidden="true">HUOM!</div>
+      <h2 class="nopeus-otsikko" id="h-nopeus">MIKSI NOPEUS RATKAISEE?</h2>
+      <ol>
+        <li>Asiakas pyytää tarjouksen monelta firmalta yhtä aikaa.</li>
+        <li>Ensimmäinen vastaaja saa yleensä keikan.</li>
+        <li>Illalla tullut viesti on aamulla jo toisen firman kalenterissa.</li>
+      </ol>
+      <p class="nopeus-loppu">Siksi Kalle vastaa heti. Myös yöllä.</p>
     </section>
 
     <section id="palvelut" aria-labelledby="h-palvelut">
