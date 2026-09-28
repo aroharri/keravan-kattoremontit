@@ -102,6 +102,74 @@
   @keyframes syke{50%{transform:rotate(14deg) scale(1.08)}}
   .hero-oikea .rakenteilla{display:block;text-align:center;margin-top:12px}
   @media (prefers-reduced-motion:reduce){.cta-klikkaa .nuoli,.tahti{animation:none}}
+  /* Näin se toimii */
+  .toimii{background:#fff;border:4px ridge #c0c0c0;padding:0 0 12px}
+  .toimii-otsikko{margin:0;background:#000080;color:#ffff00;font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;font-size:16px;letter-spacing:2px;padding:4px 12px;border-bottom:3px outset #6f6fff}
+  .toimii ol{list-style:none;counter-reset:vaihe;margin:12px 0 0;padding:0 14px}
+  .toimii ol li{counter-increment:vaihe;position:relative;padding:4px 0 10px 54px;margin:0 0 6px;border-bottom:1px dotted #999}
+  .toimii ol li:last-child{border-bottom:0}
+  .toimii ol li::before{content:counter(vaihe);position:absolute;left:0;top:2px;width:40px;height:40px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#fff59d,#ffb300 55%,#e65100);border:3px outset #ffd54f;color:#7a0000;
+    font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;font-size:20px;line-height:34px;text-align:center;text-shadow:1px 1px 0 #fff}
+  .toimii ol li b{color:#000080}
+  .rajat{margin:6px 14px 0;background:#fff0f0;border:2px dashed #c40000;padding:8px 12px}
+  .rajat p{margin:0 0 4px}
+  /* Ilmoitustaulu */
+  .taulu{background-color:#b98a52;background-image:radial-gradient(rgba(0,0,0,.18) 1px,transparent 1.5px),radial-gradient(rgba(255,255,255,.12) 1px,transparent 1.5px);
+    background-size:9px 9px,13px 13px;border:10px solid #6d4524;border-style:ridge;padding:16px 14px 18px;
+    display:grid;grid-template-columns:2fr 1fr;gap:18px;align-items:start}
+  .taulu-otsikko{grid-column:1/-1;margin:0;text-align:center;font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;
+    color:#fff;font-size:22px;letter-spacing:3px;text-shadow:2px 2px 0 #3b2412}
+  .lappu{position:relative;background:#fffde7;padding:16px 14px 10px;box-shadow:3px 4px 6px rgba(0,0,0,.4);font-size:16px}
+  .lappu::before{content:"";position:absolute;top:-7px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,#ff8a80,#d50000 60%,#7f0000);box-shadow:1px 2px 2px rgba(0,0,0,.5)}
+  .lappu p{margin:0 0 8px}
+  .lappu-iso{transform:rotate(-1.2deg);background:#ffffff}
+  .lappu-iso h3{margin:0 0 6px;font-family:"Arial Black",Impact,"Liberation Sans",sans-serif;font-weight:900;font-size:20px;color:#c40000;letter-spacing:1px}
+  .lappu-iso a{font-weight:700}
+  .repaleet{display:flex;margin:10px -14px -10px;border-top:2px dashed #999}
+  .repaleet span{flex:1;border-right:1px dashed #999;font-size:11px;line-height:1.2;writing-mode:vertical-rl;transform:rotate(180deg);padding:6px 0;text-align:center;color:#333;height:92px;overflow:hidden}
+  .repaleet span:first-child{border-left:1px dashed #999}
+  .repaleet span.revitty{visibility:hidden}
+  .pikku{display:grid;gap:18px}
+  .lappu-kelt{background:#fff59d;transform:rotate(2deg);font-size:15px}
+  .lappu-sin{background:#e3f2fd;transform:rotate(-2.5deg);font-size:15px}
+  .lappu b{display:block}
+  .lappu .suosittelija{font-size:14px;font-style:italic;color:#555;border-top:1px dotted #bbb;padding-top:6px}
+  .lappu .suosittelija b{display:inline;font-style:normal;color:#333}
+  @media (max-width:700px){
+    .taulu{grid-template-columns:1fr;border-width:7px;padding:14px 10px}
+    .repaleet span:nth-child(n+7){display:none}
+  }
+  /* Kallen CV */
+  .cv-rivi{margin:0 0 8px}
+  .cv-linkki{display:inline-block;font-weight:700;font-size:15px;background:#eee;border:2px outset #ddd;padding:2px 8px;color:#000080 !important;text-decoration:none}
+  .cv-linkki:hover,.cv-linkki:focus{background:#ffffcc;text-decoration:underline}
+  .cv-pikku{font-size:13px;padding:0 6px;margin-left:4px;vertical-align:1px}
+  .cv{padding:0;border:0;background:transparent;width:min(560px,calc(100vw - 20px));max-width:none;max-height:calc(100dvh - 20px);overflow:visible}
+  .cv::backdrop{background:rgba(0,0,60,.55)}
+  .cv:not([open]):target{display:block;position:fixed;inset:10px 0 auto;margin:0 auto;z-index:50}
+  .cv-ikkuna{background:#c0c0c0;border:2px outset #fff;box-shadow:2px 2px 0 #000,6px 8px 18px rgba(0,0,0,.5);font-family:"Liberation Sans",Tahoma,Arial,sans-serif;display:flex;flex-direction:column;max-height:calc(100dvh - 20px)}
+  .cv-palkki{display:flex;align-items:center;gap:6px;background:linear-gradient(90deg,#0a246a,#3a6ea5);color:#fff;font-weight:700;font-size:14px;padding:3px 3px 3px 6px}
+  .cv-palkki span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cv-x{width:26px;height:22px;display:inline-flex;align-items:center;justify-content:center;background:#c0c0c0;border:2px outset #fff;color:#000 !important;font-weight:900;font-size:14px;text-decoration:none;cursor:pointer;font-family:inherit;padding:0;line-height:1}
+  .cv-x:active{border-style:inset}
+  .cv-x:focus-visible,.cv-nappi:focus-visible{outline:2px dotted #000;outline-offset:1px}
+  .cv-valikko{font-size:13px;padding:2px 6px;border-bottom:1px solid #808080;color:#000}
+  .cv-valikko u{text-decoration:underline}
+  .cv-paperi{margin:6px;background:#fff;border:2px inset #fff;padding:16px 18px;overflow-y:auto;font-family:"Courier New","Liberation Mono",monospace;font-size:15px;line-height:1.45;color:#111}
+  .cv-paperi h3{margin:0 0 10px;font-size:19px;letter-spacing:1px;border-bottom:2px solid #111;padding-bottom:4px}
+  .cv-paperi dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 12px}
+  .cv-paperi dt{font-weight:700}
+  .cv-paperi dd{margin:0}
+  .cv-ala{text-align:center;padding:4px 8px 10px}
+  .cv-nappi{display:inline-block;background:#c0c0c0;border:2px outset #fff;box-shadow:1px 1px 0 #000;padding:6px 16px;color:#000 !important;font-weight:700;text-decoration:none;font-size:16px}
+  .cv-nappi:active{border-style:inset}
+  @media (max-width:520px){
+    .cv-paperi{padding:12px;font-size:14px}
+    .cv-paperi dl{grid-template-columns:1fr;gap:0}
+    .cv-paperi dt{margin-top:6px}
+  }
   /* Palvelut */
   .palvelut{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
   .palvelut li{background:#fff;border:3px outset #d9d9d9;padding:12px}
@@ -174,7 +242,7 @@
 </style>
 </head>
 <body>
-<p class="psst" role="note"><span class="psst-tag">Psst</span>Keravan Kattoremontit Oy on keksitty yritys. Sen tehtävä on esitellä sähköpostiin vastaavaa Pikavastaus-bottia – kokeile: <a href="mailto:pikavastaus@gmail.com?subject=Kattoremontti&amp;body=Hei%21%0A%0AKatosta%20tippuu%20vett%C3%A4%20yl%C3%A4kertaan%20aina%2C%20kun%20sataa%20kunnolla.%20Talo%20on%20Keravalla.%20Voisitteko%20tulla%20katsomaan%3F%0A%0ATerveisin%0A">pikavastaus@gmail.com</a></p>
+<p class="psst" role="note"><span class="psst-tag">Psst</span>Keravan Kattoremontit Oy on keksitty yritys. Sen tehtävä on esitellä sähköpostiin vastaavaa Pikavastaus-bottia nimeltä Kalle Botti – kokeile: <a href="mailto:pikavastaus@gmail.com?subject=Kattoremontti&amp;body=Hei%21%0A%0AKatosta%20tippuu%20vett%C3%A4%20yl%C3%A4kertaan%20aina%2C%20kun%20sataa%20kunnolla.%20Talo%20on%20Keravalla.%20Voisitteko%20tulla%20katsomaan%3F%0A%0ATerveisin%0A">pikavastaus@gmail.com</a></p>
 <div class="wrap">
   <header id="etusivu">
     <h1 class="wordart">KERAVAN KATTOREMONTIT <span class="oy">OY</span></h1>
@@ -185,6 +253,7 @@
     <a href="#etusivu">Etusivu</a>
     <a href="#palvelut">Palvelut</a>
     <a href="#miksi">Miksi me</a>
+    <a href="#toimii">Näin se toimii</a>
     <a href="#palaute">Asiakaspalaute</a>
     <a href="#yhteys">Ota yhteyttä</a>
   </nav>
@@ -263,12 +332,49 @@
     <section id="miksi" aria-labelledby="h-miksi">
       <h2 id="h-miksi">⭐ Miksi me?</h2>
       <ul class="miksi">
-        <li><b>Vastaamme sähköpostiin minuuteissa. Myös kello kolme yöllä.</b> Asiakaspalvelustamme vastaa Kalle, joka ei nuku. Emme ole kysyneet syytä, koska se tuntui epäkohteliaalta.</li>
+        <li><b>Vastaamme sähköpostiin minuuteissa. Myös kello kolme yöllä.</b> Asiakaspalvelustamme vastaa Kalle, joka ei nuku. Emme ole kysyneet syytä, koska se tuntui epäkohteliaalta. <a class="cv-linkki cv-pikku" href="#kalle-cv" aria-haspopup="dialog">📄 Kallen CV</a></li>
         <li><b>Käynti aina ennen tarjousta.</b> Kattoa ei arvioida puhelimessa eikä kuvailun perusteella. Tulemme paikalle ja katsomme (ks. vakava ilme).</li>
         <li><b>Emme lupaa samana päivänä mitään.</b> Emme myöskään lupaa mitään seuraavana päivänä. Lupaamme vain vastata viestiisi nopeasti ja sopia kanssasi käynnin.</li>
         <li><b>Kysymme vain sen, mitä tarvitaan.</b> Osoite, rakennustyyppi, mikä vaivaa, milloin sopii käydä ja puhelinnumero. Kalle ei kysy lempiväriäsi.</li>
         <li><b>Paikallista osaamista.</b> Olemme nähneet Keravan katot ylhäältä käsin. Osa niistä on nähnyt meidät alhaalta.</li>
       </ul>
+    </section>
+
+    <section id="toimii" aria-labelledby="h-toimii">
+      <h2 id="h-toimii">🤝 Milloin Kalle antaa luurin mestarille?</h2>
+      <p>Kalle hoitaa sähköpostit. Mestari hoitaa katot. Työnjako on selvä, ja siitä on sovittu.</p>
+      <div class="toimii">
+        <p class="toimii-otsikko">NÄIN SE TOIMII</p>
+        <ol>
+          <li><b>Kerrot, mikä katossa vaivaa.</b> Kalle lukee viestin ja kysyy vain puuttuvat tiedot: osoitteen, talotyypin, vaivan, aikataulun ja puhelinnumeron. Jos viesti ei koske kattoja tai siitä ei saa selvää, Kalle esittää yhden tarkentavan kysymyksen. Yhden.</li>
+          <li><b>Tiedot ovat koossa.</b> Kalle kiittää ja kertoo, että sinulle soitetaan tai ehdotetaan käyntiaikoja. Kalle ei itse soita. Kalle kirjoittaa.</li>
+          <li><b>Kuuma liidi, heti tieto.</b> Kun osoite, puhelinnumero, tarve ja käynti noin kuukauden sisällä ovat koossa, mestari saa heti hälytyksen: nyt kannattaa soittaa. <b>Ei niin kiireinen?</b> Viesti ja tiedot odottavat asiakasrekisterissä siistissä järjestyksessä koko sähköpostiketjun kanssa. Niihin ehtii palata, kun pääsee katolta alas.</li>
+          <li><b>Mitään ei unohdeta.</b> Jokainen yhteydenotto tallentuu asiakasrekisteriin koko sähköpostiketjun kanssa. Mestari näkee koko historian, eikä palaavalta asiakkaalta kysytä samoja asioita uudestaan.</li>
+        </ol>
+        <div class="rajat">
+          <p><b>Mitä Kalle ei tee:</b> Kalle ei kerro hintoja, ei anna takuita eikä lupaa käyntiä samalle päivälle. Ne jäävät mestarille, ja hän palaa niihin tarkastuskäynnin jälkeen.</p>
+          <p>Kalle tietää rajansa. Tikkaille Kalle ei nouse.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ilmoitustaulu" aria-labelledby="h-taulu">
+      <div class="taulu">
+        <h2 class="taulu-otsikko" id="h-taulu">📌 ILMOITUSTAULU</h2>
+        <div class="lappu lappu-iso">
+          <h3>TYÖNHAKU: Asiakaspalvelija Kalle, vapaana heti</h3>
+          <p>Kokenut sähköpostiasiakaspalvelija etsii uusia työnantajia. Käy vakituiseksi, osa-aikaiseksi tai vaikka vain kiireisimmäksi sesongiksi. Ei tarvitse työpistettä, kahvitaukoja eikä lomia.</p>
+          <p>Kalle vastaa asiakkaillenne muutamassa minuutissa vuorokauden ympäri ja kysyy vain puuttuvat tiedot. Kuumasta liidistä Kalle hälyttää heti, muut odottavat siistissä järjestyksessä, kunnes pääsette katolta alas. Hinnoista ja lupauksista päätätte aina itse.</p>
+          <p class="suosittelija"><b>Suosittelija:</b> mestari, Keravan Kattoremontit Oy</p>
+          <p class="cv-rivi"><a class="cv-linkki" href="#kalle-cv" aria-haspopup="dialog">📄 Lue Kallen CV</a></p>
+          <p><a href="mailto:pikavastaus@gmail.com?subject=Kalle%20t%C3%B6ihin%20meille&amp;body=Hei%21%0A%0AN%C3%A4imme%2C%20ett%C3%A4%20Kalle%20etsii%20uusia%20ty%C3%B6nantajia.%20Voisiko%20Kalle%20tulla%20meille%20vastaamaan%20asiakkaiden%20s%C3%A4hk%C3%B6posteihin%3F%20Kertoisitteko%20lis%C3%A4%C3%A4%3F%0A%0ATerveisin%0A">Ota yhteyttä</a>, niin katsotaan, miten Kalle sopisi teidän tiimiinne.</p>
+          <div class="repaleet" aria-hidden="true"><span>KALLE TÖIHIN ✉</span><span class="revitty">KALLE TÖIHIN ✉</span><span>KALLE TÖIHIN ✉</span><span>KALLE TÖIHIN ✉</span><span class="revitty">KALLE TÖIHIN ✉</span><span>KALLE TÖIHIN ✉</span><span>KALLE TÖIHIN ✉</span><span>KALLE TÖIHIN ✉</span></div>
+        </div>
+        <div class="pikku">
+          <div class="lappu lappu-kelt"><b>MYYDÄÄN:</b> Tikkaat, käyttämättömät. Kalle ei tarvitse niitä. Kysy mestarilta.</div>
+          <div class="lappu lappu-sin"><b>KADONNUT:</b> Tennispallo, vuonna 1987. Löytyi jo, kiitos kaikille.</div>
+        </div>
+      </div>
     </section>
 
     <section id="palaute" aria-labelledby="h-palaute">
@@ -310,7 +416,7 @@
 
     <section id="demo" class="demo" aria-labelledby="h-demo">
       <h2 id="h-demo">ℹ️ Huom: tämä on demo</h2>
-      <p><b>Keravan Kattoremontit Oy on keksitty demoyritys.</b> Sivun takana on Pikavastaus-botti, joka vastaa sähköpostiin minuuteissa vuorokauden ympäri.</p>
+      <p><b>Keravan Kattoremontit Oy on keksitty demoyritys.</b> Sivun takana on Kalle Botti -niminen Pikavastaus-botti, joka vastaa sähköpostiin minuuteissa vuorokauden ympäri.</p>
       <p>Kokeile: lähetä viesti osoitteeseen <a href="mailto:pikavastaus@gmail.com?subject=Kattoremontti&amp;body=Hei%21%0A%0AKatosta%20tippuu%20vett%C3%A4%20yl%C3%A4kertaan%20aina%2C%20kun%20sataa%20kunnolla.%20Talo%20on%20Keravalla.%20Voisitteko%20tulla%20katsomaan%3F%0A%0ATerveisin%0A">pikavastaus@gmail.com</a> ja kuvaile kattosi murheet. Kalle vastaa ja kysyy puuttuvat tiedot samaan tapaan kuin oikean yrityksen asiakaspalvelu.</p>
       <p>Haluatko saman omaan yritykseesi? <a href="mailto:pikavastaus@gmail.com?subject=Pikavastaus-botti&amp;body=Hei%21%0A%0AN%C3%A4in%20Keravan%20Kattoremontit%20-demon.%20Kiinnostaisi%20vastaava%20s%C3%A4hk%C3%B6postibotti%20omaan%20yritykseeni.%20Kertoisitteko%20lis%C3%A4%C3%A4%3F%0A%0ATerveisin%0A">Kysy samasta osoitteesta</a>.</p>
       <p style="font-size:14px;color:#555;margin:0">Sivun henkilöt, paikat ja asiakaspalautteet ovat keksittyjä. Mahdolliset yhtäläisyydet oikeisiin yrityksiin tai henkilöihin ovat sattumaa. Oikeita kattotöitä ei tämän sivun kautta tilata.</p>
@@ -326,7 +432,41 @@
 </div>
 
 <div class="sticky" role="note">
-  <b>DEMO:</b> Keravan Kattoremontit Oy on keksitty yritys. Kokeile Pikavastaus-bottia: <a href="mailto:pikavastaus@gmail.com?subject=Kattoremontti&amp;body=Hei%21%0A%0AKatosta%20tippuu%20vett%C3%A4%20yl%C3%A4kertaan%20aina%2C%20kun%20sataa%20kunnolla.%20Talo%20on%20Keravalla.%20Voisitteko%20tulla%20katsomaan%3F%0A%0ATerveisin%0A">pikavastaus@gmail.com</a> · <a href="#demo">Lue lisää</a>
+  <b>DEMO:</b> Keravan Kattoremontit Oy on keksitty yritys. Kokeile Pikavastaus-bottia nimeltä Kalle Botti: <a href="mailto:pikavastaus@gmail.com?subject=Kattoremontti&amp;body=Hei%21%0A%0AKatosta%20tippuu%20vett%C3%A4%20yl%C3%A4kertaan%20aina%2C%20kun%20sataa%20kunnolla.%20Talo%20on%20Keravalla.%20Voisitteko%20tulla%20katsomaan%3F%0A%0ATerveisin%0A">pikavastaus@gmail.com</a> · <a href="#demo">Lue lisää</a>
 </div>
+<dialog id="kalle-cv" class="cv" aria-labelledby="cv-otsikko">
+  <div class="cv-ikkuna">
+    <div class="cv-palkki"><span>📄 Kalle_CV.doc</span><a class="cv-x" href="#ilmoitustaulu" aria-label="Sulje CV" data-sulje>✕</a></div>
+    <div class="cv-valikko" aria-hidden="true"><u>T</u>iedosto &nbsp; <u>M</u>uokkaa &nbsp; <u>N</u>äytä &nbsp; <u>O</u>hje</div>
+    <div class="cv-paperi">
+      <h3 id="cv-otsikko">KALLE BOTTI – asiakaspalvelija</h3>
+      <dl>
+        <dt>Syntynyt:</dt><dd>2026, pilvipalvelussa</dd>
+        <dt>Työkokemus:</dt><dd>Keravan Kattoremontit Oy, asiakaspalvelun pikavastaaja, 2026–. Vastannut jokaiseen viestiin. Ei ole noussut kertaakaan tikkaille.</dd>
+        <dt>Osaaminen:</dt><dd>Vastaa minuuteissa vuorokauden ympäri, kysyy vain puuttuvat tiedot, tunnistaa kuuman liidin, ei keksi hintoja.</dd>
+        <dt>Kielitaito:</dt><dd>suomi (myös pilkut), englanti</dd>
+        <dt>Harrastukset:</dt><dd>sähköposti</dd>
+        <dt>Heikkoudet:</dt><dd>Ei juo kahvia, joten taukohuoneen keskustelut jäävät vähälle.</dd>
+        <dt>Palkkatoive:</dt><dd>270&nbsp;€/kk + alv. Ei lomarahaa.</dd>
+        <dt>Suosittelija:</dt><dd>mestari, Keravan Kattoremontit Oy</dd>
+      </dl>
+    </div>
+    <div class="cv-ala"><a class="cv-nappi" href="mailto:pikavastaus@gmail.com?subject=Kalle%20t%C3%B6ihin%20meille&amp;body=Hei%21%0A%0AN%C3%A4imme%2C%20ett%C3%A4%20Kalle%20etsii%20uusia%20ty%C3%B6nantajia.%20Voisiko%20Kalle%20tulla%20meille%20vastaamaan%20asiakkaiden%20s%C3%A4hk%C3%B6posteihin%3F%20Kertoisitteko%20lis%C3%A4%C3%A4%3F%0A%0ATerveisin%0A">Kalle töihin meille ✉</a></div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var d=document.getElementById('kalle-cv');
+  if(!d||typeof d.showModal!=='function')return;
+  document.querySelectorAll('a[href="#kalle-cv"]').forEach(function(a){
+    a.addEventListener('click',function(e){e.preventDefault();d.showModal();});
+  });
+  d.querySelectorAll('[data-sulje]').forEach(function(b){
+    b.setAttribute('role','button');
+    b.addEventListener('click',function(e){e.preventDefault();d.close();});
+  });
+  d.addEventListener('click',function(e){if(e.target===d)d.close();});
+})();
+</script>
 </body>
 </html>
